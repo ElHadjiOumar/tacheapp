@@ -27,7 +27,7 @@ export class TacheService {
     return this.http.delete<void>(`${this.apiServerUrl}/tache/delete/${tacheId}`);
   }
 
-  getAll() :Observable<any> {
+  public getAll() :Observable<any> {
     return this.http.get("http://localhost:8080/tache/all").pipe(map(result => result));
   }
 }
